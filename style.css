@@ -358,3 +358,44 @@ body {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+.contact-card {
+  width: 100%; /* take full width of parent */
+  max-width: none; /* remove any internal limit */
+  background-color: #141236;
+  border-radius: 1rem;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  color: #efd1d1;
+  /* max-width: 600px; */
+  margin-top: 3rem;
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f54dc6;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.contact-list a {
+  color: #efd1d1;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: #f54dc6;
+}
