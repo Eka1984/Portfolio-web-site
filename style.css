@@ -299,7 +299,7 @@ body {
   display: flex;
   flex: 1;
   width: 100%;
-  max-width: 45vw;
+  max-width: 50vw;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -323,4 +323,38 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.skill-card {
+  background-color: #141236;
+  border-radius: 1rem;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  color: #efd1d1;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skill-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #efd1d1;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.skill-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
