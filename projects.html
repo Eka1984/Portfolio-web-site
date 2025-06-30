@@ -29,7 +29,7 @@
 
         <nav class="nav-links">
           <a class="nav-item" href="./about.html">About</a>
-          <a class="nav-item" href="./projects.html">Projects</a>
+          <a class="nav-item active" href="./projects.html">Projects</a>
           <a class="nav-item" href="./skills.html">Skills</a>
           <a class="nav-item" href="./contact.htm">Contact</a>
         </nav>
@@ -98,8 +98,11 @@
         </div>
       </section>
       <footer class="footer">
-        <p>© Ekaterina Korzneva 2025</p>
+        <p>© <span id="year"></span> Ekaterina Korzneva</p>
       </footer>
     </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
