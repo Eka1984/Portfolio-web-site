@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Favicon and manifest -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicons/site.webmanifest" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/apple-touch-icon.png"
+    />
+    <link rel="icon" href="favicons/favicon.ico" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,27 +62,44 @@
             <!-- Project 1 -->
             <div class="project-card">
               <img
-                src="./assets/default.jpg"
+                src="./assets/sensor_app.png"
                 alt="Project screenshot"
                 class="project-img"
+                onclick="openLightbox(this.src)"
               />
+              <!-- Lightbox container -->
+              <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <img id="lightbox-img" />
+              </div>
+
               <div class="project-info">
-                <h3>Project Title</h3>
+                <h3>
+                  Sensor Data Visualization Application (Thesis and internship
+                  project for Nuuka, 2025)
+                </h3>
                 <p>
-                  Bacon ipsum dolor amet beef short loin tri-tip, ham hock
-                  chicken tail landjaeger bacon strip steak cow pork jerkfatback
-                  leberkas. Filet mignon t-bone pork belly, ball tip beef
-                  turducken sausage fatback brisket pig. Hamburger pork loin
-                  corned beef, tenderloin kielbasa pastrami ham strip steak
-                  biltong meatball ribeye pig bresaola turkey jerky. Tail chuck
-                  brisket, venison shankle landjaeger flank jowl corned beef
-                  pork loin.
+                  An interactive web app for monitoring environmental sensor
+                  data in large buildings. It features:
                 </p>
-                <p><a href="#">Link: live demo</a></p>
-                <p><a href="#">Link: GitHub</a></p>
+                <ul>
+                  <li>Drag-and-drop sensor placement on floor plans</li>
+                  <li>Zooming and floor switching</li>
+                  <li>Real-time sensor data display with color-coded values</li>
+                  <li>Filtering by sensor types</li>
+                </ul>
+                <p>
+                  <a
+                    href="https://www.youtube.com/watch?v=EkreDLvS9lw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >YouTube Demo</a
+                  >
+                </p>
+
                 <div class="tags">
                   <span class="tag">React</span>
-                  <span class="tag">HTML</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">MUI</span>
                   <span class="tag">APIs</span>
                 </div>
               </div>
@@ -69,27 +107,47 @@
             <!-- Project 2 -->
             <div class="project-card">
               <img
-                src="./assets/default.jpg"
+                src="./assets/AI_job_application.png"
                 alt="Project screenshot"
                 class="project-img"
+                onclick="openLightbox(this.src)"
               />
               <div class="project-info">
-                <h3>Project Title</h3>
+                <h3>
+                  AI-Enhanced Job Application Generator (Personal Project, 2025)
+                </h3>
                 <p>
-                  Bacon ipsum dolor amet beef short loin tri-tip, ham hock
-                  chicken tail landjaeger bacon strip steak cow pork jerkfatback
-                  leberkas. Filet mignon t-bone pork belly, ball tip beef
-                  turducken sausage fatback brisket pig. Hamburger pork loin
-                  corned beef, tenderloin kielbasa pastrami ham strip steak
-                  biltong meatball ribeye pig bresaola turkey jerky. Tail chuck
-                  brisket, venison shankle landjaeger flank jowl corned beef
-                  pork loin.
+                  A lightweight web tool that uses the OpenAI API to generate
+                  tailored job application letters. This app demonstrates:
                 </p>
-                <p><a href="#">Link: live demo</a></p>
-                <p><a href="#">Link: GitHub</a></p>
+                <ul>
+                  <li>Dynamic form handling</li>
+                  <li>Integration with large language models</li>
+                  <li>
+                    Smooth user experience for writing applications faster
+                  </li>
+                </ul>
+                <p>
+                  <a
+                    href="https://www.youtube.com/watch?v=rdFn7hsgvFI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >YouTube Demo</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/Eka1984/job-app-generator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Link</a
+                  >
+                </p>
                 <div class="tags">
                   <span class="tag">React</span>
-                  <span class="tag">HTML</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Node.js</span>
                   <span class="tag">APIs</span>
                 </div>
               </div>
@@ -103,6 +161,17 @@
     </div>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      function openLightbox(src) {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        lightboxImg.src = src;
+        lightbox.style.display = "flex";
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
     </script>
   </body>
 </html>
