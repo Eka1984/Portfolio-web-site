@@ -478,3 +478,8 @@ html {
   border-radius: 0.5rem;
   box-shadow: 0 0 20px #000;
 }
+
+::selection {
+  background-color: #f54dc6; /* highlight color */
+  color: #141236; /* text color on highlight */
+}
